@@ -17,6 +17,9 @@ for file in glob.glob(test_dir + "/code/*.py"):
 
     extension = ".txt"
 
+    if file_name.endswith("_svg"): 
+        extension = ".svg"
+
     out_file_path = test_dir + "/out/" + file_name + extension
     out_file = open(out_file_path, "w")
 
