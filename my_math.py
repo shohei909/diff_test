@@ -16,7 +16,7 @@ def cos(t):
 def _sin(t):
     result = current = t;
     # テイラー展開
-    for i in range(2, 10, 2):
+    for i in range(2, 8, 2):
         current *= - t * t / (i * (i + 1))
         result += current
     return result
@@ -24,7 +24,7 @@ def _sin(t):
 def _cos(t):
     result = current = 1;
     # テイラー展開
-    for i in range(1, 11, 2):
+    for i in range(1, 9, 2):
         current *= - t * t / (i * (i + 1))
         result += current
     return result
