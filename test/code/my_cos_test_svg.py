@@ -5,7 +5,7 @@ import os
 sys.path.append(os.path.dirname(__file__) + '/../../')
 import my_math
 
-print("<!--ver:0.0-->") # このテストのバージョン
+print("<!--ver:1.0-->") # このテストのバージョン
 print("<!--my_math.cos()をSVGでプロット-->") # このテストの説明文
 
 scale = 50
