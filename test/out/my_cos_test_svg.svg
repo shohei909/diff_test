@@ -1,6 +1,7 @@
 <!--ver:0.0-->
 <!--my_math.cos()をSVGでプロット-->
 <svg width="600" height="150" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="600" height="150" fill="white"/>
 <rect x="0" y="125.0" width="600" height="0.0001" stroke="lavender" stroke-width="0.5"/>
 <rect x="0" y="75.0" width="600" height="0.0001" stroke="lavender" stroke-width="0.5"/>
 <rect x="0" y="25.0" width="600" height="0.0001" stroke="lavender" stroke-width="0.5"/>

@@ -12,6 +12,8 @@ width = 600
 height = 150
 print('<svg width="{}" height="{}" xmlns="http://www.w3.org/2000/svg">'.format(width, height))
 
+# 背景を塗りつぶし
+print('<rect x="0" y="0" width="{}" height="{}" fill="white"/>'.format(width, height))
 
 # 座標を画面上の位置に変換
 def convert_x(x):
