@@ -1,3 +1,6 @@
+# 標準入力から test/out の git diff を与えると、その変更がバージョンのアップデート規則に従った更新か判定するプログラム
+# 正しく無ければ、終了コード 1 を返す
+
 import sys
 import re
 
@@ -77,9 +80,9 @@ while True:
     line = sys.stdin.readline()
 
     if mode == Mode.HEAD:
-        if line.startswith("---"):
+        if line.startswith("--- "):
             source = line[4:-1]
-        elif line.startswith("+++"):
+        elif line.startswith("+++ "):
             dest = line[4:-1]
         elif line.startswith("@@"):
             mode = Mode.BODY
