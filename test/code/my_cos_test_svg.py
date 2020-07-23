@@ -1,7 +1,8 @@
 import sys
 import math
+import os
 
-sys.path.append(__file__ + '/../../../')
+sys.path.append(os.path.dirname(__file__) + '/../../')
 import my_math
 
 print("<!--ver:0.0-->") # このテストのバージョン
