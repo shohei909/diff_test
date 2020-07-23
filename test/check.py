@@ -82,22 +82,27 @@ while True:
         elif line.startswith("+++"):
             dest = line[4:-1]
         elif line.startswith("@@"):
-            is_first = True
             mode = Mode.BODY
             
     if mode == Mode.BODY:
         if line.startswith("-"):
-            if is_first and (mached := ver_regex.search(line)):
-                source_ver = mached.group(1)
+            if source_ver is None and not removed:
+                matched = ver_regex.search(line)
+                if matched is not None:
+                    source_ver = matched.group(1)
+                else:
+                    removed = True
             else:
-                is_first = False
                 removed = True
 
         elif line.startswith("+"):
-            if is_first and (mached := ver_regex.search(line)):
-                dest_ver = mached.group(1)
+            if dest_ver is None and not added:
+                matched = ver_regex.search(line)
+                if matched is not None:
+                    dest_ver = matched.group(1)
+                else:
+                    added = True
             else:
-                is_first = False
                 added = True
 
         elif line.startswith("index"):
