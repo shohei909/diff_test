@@ -16,7 +16,7 @@ def check(source, dest, added, removed, source_ver, dest_ver):
 
     if removed and added:
         level = "Modified"
-    if removed:
+    elif removed:
         level = "Removed"
     elif added:
         level = "Added"
