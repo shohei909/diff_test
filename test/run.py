@@ -21,7 +21,7 @@ for file in glob.glob(test_dir + "/code/**/*.py", recursive=True):
     os.makedirs(os.path.dirname(out_file_path), exist_ok=True) # 出力フォルダが無ければ作成
     out_file = open(out_file_path, "w")
 
-    # `python $test.py` のプロセスを実行
+    # `python *.py` のプロセスを実行
     subprocess.run([sys.executable, file], stdout=out_file)
     
     # 出力したファイルを記録
